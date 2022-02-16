@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: linear-gradient(90deg, #152031, #253A55 10%, #253A55 90%, #152031);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: red;
+}
+
+
+a:hover {
+  color: goldenrod;
+}
+
+#wrapper {
+  margin: 0 auto;
+  padding-bottom: 25px;
+}
+
+#nav-wrapper {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.navbar {
+  margin: 0 50px;
+  display: inline-block;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px black;
+}
+
+table.redTable {
+  border: 2px solid #A40808;
+  background-color: #EEE7DB;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+table.redTable td,
+table.redTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+
+table.redTable tbody td {
+  font-size: 13px;
+}
+
+table.redTable tr:nth-child(even) {
+  background: #F5C8BF;
+}
+
+table.redTable thead {
+  background: #A40808;
+}
+
+table.redTable thead th {
+  font-size: 19px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #A40808;
+}
+
+table.redTable thead th:first-child {
+  border-left: none;
+}
+
+table.redTable tfoot {
+  font-size: 13px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #A40808;
+}
+
+table.redTable tfoot td {
+  font-size: 13px;
+}
+
+table.redTable tfoot .links {
+  text-align: right;
+}
+
+table.redTable tfoot .links a {
+  display: inline-block;
+  background: #FFFFFF;
+  color: #A40808;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+table.redTable tfoot .links a:hover {
+  text-decoration: underline;
+}
+
+.container {
+    border-radius: 25px;
+    background: #274201;
+    color : white;
+    padding: 20px;
+    width: fit-content;
+    float: left;
+}
+
+#menu {
+  width: fit-content;
+  width: -moz-fit-content;
+  margin: 0 auto;
+}
+
+#menu ul {
+  padding: 0;
+  margin: 0;
+  font-family: 'Monsterrat', sans-serif;
+  font-size: 25px;
+  font-variant: small-caps;
+  font-weight: bold;
+  display: inline-block;
+  list-style-type: none;
+  text-shadow: 1px 1px 1px black;
+  letter-spacing: 1px;
+}
+
+#menu ul>li {
+  width: 200px;
+  text-align: center;
+}
+
+#menu ul.submenu {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  list-style-type: none;
+  background-color: #253A55;
+  border: 1px solid black;
+}
+
+#menu li:hover ul.submenu {
+  display: block;
+}
+
+#menu ul.submenu li:hover {
+  background-color: #1d9099;
+  color: #e79c10;
+}
+
+h1 {
+  color: white;
+}

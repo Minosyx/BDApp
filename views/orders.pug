@@ -1,0 +1,37 @@
+extends layout
+
+block append head
+    script(src='/javascripts/dynamic.js')
+
+block content
+  div
+    table.redTable
+      thead
+        tr
+          th Order ID
+          th Product IDs
+          th Created
+          th Updated
+          th Total cost
+      tfoot
+        tr
+            td(colspan="5")
+                .links
+                    script.
+                        var page = #{page};
+                        var pages = #{pages};
+                        var size = #{size};
+                        addAnchors(page, pages, size);
+
+      tbody
+        each order in orders
+          tr
+            td
+              a(href=`/orders/${order.id}`)= order.id
+            td
+                each product in order.products
+                    p: a(href=`/products/${product.id}`) #{product.id}
+            td= order.createdAt
+            td= order.updatedAt
+            td= order.totalCost
+            //- td= doc.doc_description

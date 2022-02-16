@@ -1,0 +1,21 @@
+extends layout
+
+block append head
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script(src="/javascripts/post.js")
+
+block content
+    .container
+        script.
+            window.onload = post;
+        form#form(action="/products" method="post")
+            label(for="name") Nazwa produktu 
+            input#name(type="text" name="name")
+            br
+            label(for="category") Kategoria 
+            input#category(type="text" name="category")
+            br
+            label(for="cost") Koszt 
+            input#cost(type="number" name="cost" min=0)
+            br
+            input#submit(type="button" value="Submit request")

@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    block head
+      title= title
+  body
+    block header
+      #wrapper
+        header
+          nav#menu
+            #nav-wrapper
+               ul
+                li#product.navbar: a(href="/products") Produkty
+                  ul.submenu 
+                    li: a(href="/products/get") Szukaj #[br]produktów
+                    li: a(href="/products/post") Dodaj #[br]produkt
+                    li: a(href="/products/delete") Usuń #[br]produkt
+                    li: a(href="/products/update") Zmień #[br]produkt
+                li#order.navbar: a(href="/orders") Zamówienia
+                  ul.submenu
+                    li: a(href="/orders/get") Szukaj #[br]zamówienia
+                    li: a(href="/orders/post") Dodaj #[br]zamówienie
+                    li: a(href="/orders/delete") Usuń #[br]zamówienie
+                    li: a(href="/orders/update") Zmień #[br]zamówienie
+    block content
+
+

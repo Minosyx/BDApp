@@ -1,0 +1,16 @@
+extends layout
+
+block append head
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script(src="/javascripts/prepare_and_post.js")
+
+block content
+    .container
+        script.
+            window.onload = prepare_and_post;
+        form#form(action="/orders" method="post" enctype='multipart/form-data')
+            label(for="product0") ID Produktu 
+            input#product0(type="number" name="products" min=1)
+            br
+            input(type="button" onClick="add_product()" value="Add product")
+            input#submit(type="button" value="Submit request")

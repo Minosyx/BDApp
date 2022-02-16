@@ -1,0 +1,16 @@
+extends layout
+
+block append head
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script(src="/javascripts/get_product.js")
+
+block content
+    .container
+        form#form(action="/products" method="get" enctype='multipart/form-data')
+            label(for="id") ID Produktu 
+            input#id(type="number" name="id")
+            br
+            label(for="name") Nazwa produktu 
+            input#name(type="text" name="name")
+            br
+            input#submit(type="button" value="Submit request")

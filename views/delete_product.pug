@@ -1,0 +1,15 @@
+extends layout
+
+block append head
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script(src="/javascripts/delete.js")
+
+block content
+    .container
+        script.
+            window.onload = del;
+        form#form(action="/products" method="get")
+            label(for="id") ID Produktu 
+            input#id(type="number" name="id")
+            br
+            input#submit(type="submit")

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    each product in products
+        div.container
+            p Product ID: 
+                span= product.id        
+            p Name: 
+                span= product.name
+            p Category: 
+                span= product.category
+            p Cost: 
+                span= product.cost

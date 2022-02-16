@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    div.container
+        p Order ID: 
+            span= order.id        
+        p Product IDs: 
+            each product in order.products
+                a(href=`/products/${product.id}`) #{product.id}, 
+        p Created: 
+            span= order.createdAt
+        p Updated: 
+            span= order.updatedAt
+        p Total cost: 
+            span= order.totalCost

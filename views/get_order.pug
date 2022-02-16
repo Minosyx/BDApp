@@ -1,0 +1,15 @@
+extends layout
+
+block append head
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script(src="/javascripts/get_order.js")
+
+block content
+    .container
+        script.
+            window.onload = get
+        form#form(action="/orders" method="get" enctype='multipart/form-data')
+            label(for="id") ID Zamówienia 
+            input#id(type="number" name="id")
+            br
+            input#submit(type="button" value="Submit request")
